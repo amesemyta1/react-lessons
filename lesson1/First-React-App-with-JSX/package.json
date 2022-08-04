@@ -4,8 +4,6 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "lint": "eslint src",
-        "lint:fix": "eslint src --fix",
         "build": "webpack -p",
         "start": "webpack-dev-server -d --devtool eval-source-maps --open"
     },
