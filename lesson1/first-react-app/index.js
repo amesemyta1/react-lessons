@@ -3,7 +3,7 @@ const rootElem = document.querySelector('#root');
 const greetingElem = React.createElement(
   'div',
   { className: 'greeting' },
-  'Hello, React! Its my first programm'
+  'Hello, React!'
 );
 
 ReactDOM.render(greetingElem, rootElem);
