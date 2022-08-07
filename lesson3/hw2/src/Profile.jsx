@@ -2,14 +2,14 @@ import React from 'react';
 import moment from 'moment';
 
 const Profile = props => {
-  const dataBirth = moment(props.birthDate).format('DD MMM YY');
+  const dataBirth = moment(props.userData.birthDate).format('DD MMM YY');
   return (
     <div>
       <div className="profile__name">
-        {props.firstName} {props.lastName}
+        {props.userData.firstName} {props.userData.lastName}
       </div>
       <div className="profile__birth">
-        Was born {dataBirth} in {props.birthPlace}
+        Was born {dataBirth} in {props.userData.birthPlace}
       </div>
     </div>
   );
