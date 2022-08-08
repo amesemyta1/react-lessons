@@ -14,13 +14,13 @@ class Clock extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      time: getTimeWithOffset(props.offset + 1),
+      time: getTimeWithOffset(props.offset),
     };
     console.log('state-time: ', this.state.time);
     // Do Not This Way
     setInterval(() => {
       this.setState({
-        time: getTimeWithOffset(props.offset + 1),
+        time: getTimeWithOffset(props.offset),
       });
     }, 1000);
   }
