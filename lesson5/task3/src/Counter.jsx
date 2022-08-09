@@ -31,14 +31,14 @@ class Counter extends Component {
 
   render() {
     return (
-      <div class="counter">
-        <button data-action="decrease" class="counter__button" onClick={this.decrement}>
+      <div className="counter">
+        <button data-action="decrease" className="counter__button" onClick={this.decrement}>
           -
         </button>
-        <span class="counter__value" onClick={() => this.reset()}>
+        <span className="counter__value" onClick={() => this.reset()}>
           {this.state.counter}
         </span>
-        <button data-action="increase" class="counter__button" onClick={this.increment}>
+        <button data-action="increase" className="counter__button" onClick={this.increment}>
           +
         </button>
       </div>
