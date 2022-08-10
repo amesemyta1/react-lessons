@@ -23,7 +23,7 @@ class Toggler extends Component {
 
   render() {
     return (
-      <div class="toggler" onClick={e => this.changeStatus(e)}>
+      <div className="toggler" onClick={e => this.changeStatus(e)}>
         {this.state.status}
       </div>
     );
