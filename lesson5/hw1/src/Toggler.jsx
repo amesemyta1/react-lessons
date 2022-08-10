@@ -9,8 +9,8 @@ class Toggler extends Component {
     };
   }
 
-  changeStatus(e) {
-    if (e.target.textContent === 'Off') {
+  changeStatus() {
+    if (this.state.status === 'Off') {
       this.setState({
         status: 'On',
       });
@@ -23,7 +23,7 @@ class Toggler extends Component {
 
   render() {
     return (
-      <div className="toggler" onClick={e => this.changeStatus(e)}>
+      <div className="toggler" onClick={() => this.changeStatus()}>
         {this.state.status}
       </div>
     );
