@@ -5,18 +5,18 @@ class Toggler extends Component {
     super(props);
 
     this.state = {
-      status: 'off',
+      status: 'Off',
     };
   }
 
   changeStatus() {
-    if (this.state.status === 'off') {
+    if (this.state.status === 'Off') {
       this.setState({
-        status: 'on',
+        status: 'On',
       });
     } else {
       this.setState({
-        status: 'off',
+        status: 'Off',
       });
     }
   }
