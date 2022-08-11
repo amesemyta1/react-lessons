@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Online = () => {
-  return <span className="status__text">All good!</span>;
-};
+class Online extends Component {
+  render() {
+    return <span className="status__text">All good!</span>;
+  }
+}
 
 export default Online;
