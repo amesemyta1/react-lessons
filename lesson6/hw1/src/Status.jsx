@@ -14,7 +14,7 @@ class Status extends Component {
   render() {
     // const button = this.state.isLoggedIn ? Logout(this.handleLogout) : Login(this.handleLogin);
 
-    return <div>{this.state.isOnline ? Online() : Offline()}</div>;
+    return <div className="status">{this.state.isOnline ? Online() : Offline()}</div>;
   }
 }
 
