@@ -25,7 +25,7 @@ class Auth extends Component {
   };
 
   render() {
-    // this.state.isLoggedIn ? Logout(this.handleLogout) : Login(this.handleLogin);
+    // const button = this.state.isLoggedIn ? Logout(this.handleLogout) : Login(this.handleLogin);
 
     return (
       <div className="panel">
