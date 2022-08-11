@@ -26,4 +26,18 @@ module.exports = {
       },
     ],
   },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2022,
+    sourceType: 'module',
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx'],
+      },
+    },
+  },
 };
