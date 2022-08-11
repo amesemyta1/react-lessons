@@ -5,4 +5,4 @@ import Auth from './Auth.jsx';
 
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<Auth isLoggedIn={false} />, rootElement);
+ReactDOM.render(<Auth isLoggedIn={true} />, rootElement);

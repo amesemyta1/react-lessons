@@ -4,11 +4,11 @@ import Login from './Login.jsx';
 import Logout from './Logout.jsx';
 
 class Auth extends Component {
-  constructor({ isLoggedIn }) {
-    super({ isLoggedIn });
+  constructor(props) {
+    super(props);
 
     this.state = {
-      isLoggedIn,
+      isLoggedIn: props.isLoggedIn,
     };
   }
 
