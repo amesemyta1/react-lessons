@@ -12,9 +12,9 @@ class Status extends Component {
   }
 
   render() {
-    // const button = this.state.isLoggedIn ? Logout(this.handleLogout) : Login(this.handleLogin);
+    const status = this.state.isOnline ? Online() : Offline();
 
-    return <div className="status">{this.state.isOnline ? Online() : Offline()}</div>;
+    return <div className="status">{status}</div>;
   }
 }
 
