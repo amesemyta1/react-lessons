@@ -8,7 +8,7 @@ class Auth extends Component {
     super(props);
 
     this.state = {
-      isLoggedIn: props.isLoggedIn,
+      isLoggedIn: false,
     };
   }
 
@@ -30,7 +30,11 @@ class Auth extends Component {
     return (
       <div className="panel">
         <Greeting isLoggedIn={this.state.isLoggedIn} />
-        {this.state.isLoggedIn ? Logout(this.onLogout) : Login(this.onLogin)}
+        {this.state.isLoggedIn ? (
+          <Logout onLogout={this.onLogout} />
+        ) : (
+          <Login onLogin={this.onLogin} />
+        )}
       </div>
     );
   }
