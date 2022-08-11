@@ -1,7 +1,11 @@
 import React from 'react';
 
 const Logout = handle => {
-  return <button onClick={handle}>Logout</button>;
+  return (
+    <button className="logout btn" onClick={handle}>
+      Logout
+    </button>
+  );
 };
 
 export default Logout;
