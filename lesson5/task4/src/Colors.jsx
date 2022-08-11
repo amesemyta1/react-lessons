@@ -5,10 +5,6 @@ const GREEN = '#0f0';
 const BLUE = '#00f';
 
 class Colors extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   setBodyColor = color => {
     document.body.style.backgroundColor = color;
   };
