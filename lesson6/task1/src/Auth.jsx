@@ -25,12 +25,12 @@ class Auth extends Component {
   };
 
   render() {
-    const button = this.state.isLoggedIn ? Logout(this.handleLogout) : Login(this.handleLogin);
+    // this.state.isLoggedIn ? Logout(this.handleLogout) : Login(this.handleLogin);
 
     return (
       <div className="panel">
         <Greeting isLoggedIn={this.state.isLoggedIn} />
-        <div>{button}</div>
+        {this.state.isLoggedIn ? Logout(this.handleLogout) : Login(this.handleLogin)}
       </div>
     );
   }
