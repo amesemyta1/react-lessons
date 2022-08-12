@@ -2,7 +2,7 @@ import React from 'react';
 
 // class NumberList extends Component
 
-const NumberList = ({ numbers }) => {
+const NumbersList = ({ numbers }) => {
   return (
     <ul>
       {numbers.map(num => (
@@ -12,4 +12,4 @@ const NumberList = ({ numbers }) => {
   );
 };
 
-export default NumberList;
+export default NumbersList;
