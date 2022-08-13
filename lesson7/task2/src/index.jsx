@@ -1,35 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import TransactionsList from './TransactionsList.jsx';
+import UsersList from './UsersList.jsx';
 
 const rootElement = document.querySelector('#root');
 
-const transactions = [
+const users = [
   {
     id: 'id-0',
-    from: 'USD',
-    to: 'EUR',
-    amount: 1200,
-    rate: 0.8,
-    time: '2019-01-10T17:08:35.447Z',
+    age: 21,
+    name: 'Bob',
   },
   {
     id: 'id-1',
-    from: 'USD',
-    to: 'UAH',
-    amount: 100000,
-    rate: 25.7,
-    time: '2019-01-10T18:22:35.447Z',
+    age: 17,
+    name: 'Tom',
   },
   {
     id: 'id-2',
-    from: 'EUR',
-    to: 'USD',
-    amount: 100,
-    rate: 1.1,
-    time: '2019-01-10T17:01:35.447Z',
+    age: 18,
+    name: 'Tad',
+  },
+  {
+    id: 'id-3',
+    age: 45,
+    name: 'Sam',
   },
 ];
 
-ReactDOM.render(<TransactionsList transactions={transactions} />, rootElement);
+ReactDOM.render(<UsersList users={users} />, rootElement);
