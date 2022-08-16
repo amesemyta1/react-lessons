@@ -4,7 +4,6 @@ import UserForm from './UserForm';
 
 class App extends Component {
   createUser = user => {
-    // e.preventDefault();
     console.log(user);
   };
 
