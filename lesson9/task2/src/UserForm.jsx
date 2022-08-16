@@ -9,8 +9,8 @@ class UserForm extends Component {
     about: '',
   };
 
-  handleChange = e => {
-    const { name, value, checked, type } = e.target;
+  handleChange = event => {
+    const { name, value, checked, type } = event.target;
 
     const val = type === 'checkbox' ? checked : value;
 
@@ -19,9 +19,14 @@ class UserForm extends Component {
     });
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.submit(this.state);
+  };
+
   render() {
     return (
-      <form className="login-form" onSubmit={this.props.onSubmit}>
+      <form className="login-form" onSubmit={this.handleSubmit}>
         <h1 className="form-title">Profile</h1>
         <div className="form-control">
           <label className="form-label" htmlFor="name">
