@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <UserForm
-        submit={user => {
+        onSubmit={user => {
           this.createUser(user);
         }}
       />
