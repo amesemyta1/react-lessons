@@ -1,18 +1,6 @@
 import React, { Component } from 'react';
 
 class Filter extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      filterText: this.props.filterText,
-    };
-  }
-
-  state = {
-    value: '',
-  };
-
   render() {
     return (
       <div className="filter">
