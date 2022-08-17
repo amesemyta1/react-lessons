@@ -5,7 +5,7 @@ import Filter from './Filter';
 class UsersList extends Component {
   state = {
     sorting: null,
-    value: 'a',
+    value: '',
   };
 
   handleChange = value => {

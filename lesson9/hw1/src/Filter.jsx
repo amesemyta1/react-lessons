@@ -28,8 +28,7 @@ class Filter extends Component {
           type="text"
           className="filter__input"
           onChange={this.onChange}
-          value={this.state.value}
-          placeholder={this.props.filterText}
+          value={this.props.filterText}
         />
       </div>
     );
