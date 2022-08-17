@@ -8,7 +8,8 @@ class UsersList extends Component {
     value: '',
   };
 
-  handleChange = value => {
+  handleChange = e => {
+    const { value } = e.target;
     this.setState({
       value,
     });
