@@ -13,12 +13,10 @@ class Filter extends Component {
     value: '',
   };
 
-  handleChange = event => {
+  onChange = event => {
     this.setState({
       value: event.target.value,
     });
-    console.log('event: ', event.target.value);
-    console.log('state: ', this.state.value);
     this.props.onChange(event.target.value);
   };
 
@@ -29,8 +27,9 @@ class Filter extends Component {
         <input
           type="text"
           className="filter__input"
-          onChange={this.handleChange}
+          onChange={this.onChange}
           value={this.state.value}
+          placeholder={this.props.filterText}
         />
       </div>
     );
