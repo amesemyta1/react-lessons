@@ -13,13 +13,6 @@ class Filter extends Component {
     value: '',
   };
 
-  onChange = event => {
-    this.setState({
-      value: event.target.value,
-    });
-    this.props.onChange(event.target.value);
-  };
-
   render() {
     return (
       <div className="filter">
@@ -27,7 +20,7 @@ class Filter extends Component {
         <input
           type="text"
           className="filter__input"
-          onChange={this.onChange}
+          onChange={e => this.props.onChange(e.target.value)}
           value={this.props.filterText}
         />
       </div>
