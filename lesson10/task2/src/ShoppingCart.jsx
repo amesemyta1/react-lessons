@@ -16,6 +16,31 @@ class ShoppingCart extends Component {
         name: 'iPad Pro',
         price: 799,
       },
+      {
+        id: '3',
+        name: 'iPad Pro',
+        price: 799,
+      },
+      {
+        id: '4',
+        name: 'iPad Pro',
+        price: 799,
+      },
+      {
+        id: '5',
+        name: 'iPad Pro',
+        price: 799,
+      },
+      {
+        id: '6',
+        name: 'iPad Pro',
+        price: 799,
+      },
+      {
+        id: '7',
+        name: 'iPad Pro',
+        price: 799,
+      },
     ],
   };
 
