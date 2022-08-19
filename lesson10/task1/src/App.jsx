@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
-import UserProfile from './UserProfile';
-import UserMenu from './UserMenu';
+import UserProfile from './UserProfile.jsx';
+import UserMenu from './UserMenu.jsx';
 
 class Page extends Component {
   state = {
