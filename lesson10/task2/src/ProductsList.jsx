@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import React, { Component } from 'react';
+import React from 'react';
 
 const ProductsList = ({ cartItems }) => {
   const total = cartItems.reduce((acc, item) => acc + item.price, 0);
