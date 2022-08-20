@@ -1,38 +1,36 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
-import UserProfile from './UserProfile';
-import UserMenu from './UserMenu';
 
-class Page extends Component {
-  state = {
-    userData: null,
-  };
+class EssayForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 'Please write an essay about your favorite DOM element.',
+    };
 
-  componentDidMount() {
-    this.fetchUserData(this.props.userId);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  fetchUserData = userId => {
-    const userUrl = `https://api.github.com/users/${userId}`;
-    fetch(userUrl)
-      .then(response => response.json())
-      .then(userData =>
-        this.setState({
-          userData,
-        }),
-      );
-  };
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
+  handleSubmit(event) {
+    alert('An essay was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
 
   render() {
     return (
-      <div className="page">
-        <header className="header">
-          <UserMenu userData={this.state.userData} />
-        </header>
-        <UserProfile userData={this.state.userData} />;
-      </div>
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Essay:
+          <textarea value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
     );
   }
 }
-
-export default Page;
+export default EssayForm;
