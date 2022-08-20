@@ -12,6 +12,7 @@ class Page extends Component {
   };
 
   handleChange = e => {
+    e.preventDefault();
     const { name, value } = e.target;
 
     this.setState({
