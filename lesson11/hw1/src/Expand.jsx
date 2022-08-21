@@ -30,14 +30,14 @@ class Expand extends Component {
     const handleContent = !this.state.isOpen ? null : this.props.children;
 
     return (
-      <div class="expand border">
-        <div class="expand__header">
-          <span class="expand__title">{this.props.title}</span>
-          <button class="expand__toggle-btn" onClick={handleButton}>
+      <div className="expand border">
+        <div className="expand__header">
+          <span className="expand__title">{this.props.title}</span>
+          <button className="expand__toggle-btn" onClick={handleButton}>
             {icon}
           </button>
         </div>
-        <div class="expand__content">{handleContent}</div>
+        <div className="expand__content">{handleContent}</div>
       </div>
     );
   }
