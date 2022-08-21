@@ -7,13 +7,13 @@ class Expand extends Component {
     isOpen: false,
   };
 
-  hideDialog = () => {
+  hideContent = () => {
     this.setState({
       isOpen: false,
     });
   };
 
-  showDialog = () => {
+  showContent = () => {
     this.setState({
       isOpen: true,
     });
@@ -26,7 +26,7 @@ class Expand extends Component {
       <i className="fas fa-chevron-up"></i>
     );
 
-    const handleButton = !this.state.isOpen ? this.showDialog : this.hideDialog;
+    const handleButton = !this.state.isOpen ? this.showContent : this.hideContent;
     const handleContent = !this.state.isOpen ? null : this.props.children;
 
     return (
