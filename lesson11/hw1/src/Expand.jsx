@@ -21,9 +21,9 @@ class Expand extends Component {
 
   render() {
     const icon = !this.state.isOpen ? (
-      <i class="fas fa-chevron-down"></i>
+      <i className="fas fa-chevron-down"></i>
     ) : (
-      <i class="fas fa-chevron-up"></i>
+      <i className="fas fa-chevron-up"></i>
     );
 
     const handleButton = !this.state.isOpen ? this.showDialog : this.hideDialog;
