@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const ConnectionStatus = () => {
-  const [status, seSstatus] = useState(true);
+  const [status, seSstatus] = useState({ connection: true });
   const { connection } = status;
 
   useEffect(() => {
