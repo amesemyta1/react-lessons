@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const ConnectionStatus = () => {
   const [status, seSstatus] = useState(true);
+  const { connection } = status;
 
   useEffect(() => {
     const { onLine } = window.navigator;
@@ -17,9 +18,7 @@ const ConnectionStatus = () => {
       window.removeEventListener('online', handleConnection);
       window.removeEventListener('offline', handleConnection);
     };
-  });
-
-  const { connection } = status;
+  }, [connection]);
 
   return connection ? (
     <div className="status">online</div>
