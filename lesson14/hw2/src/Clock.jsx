@@ -18,6 +18,8 @@ const Clock = ({ offset, location }) => {
         currentTime: getTimeWithOffset(offset),
       });
     }, 1000);
+
+    return clearInterval();
   }, []);
 
   return (
