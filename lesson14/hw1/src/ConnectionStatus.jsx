@@ -5,12 +5,13 @@ const ConnectionStatus = () => {
   const { connection } = status;
 
   useEffect(() => {
-    const { onLine } = window.navigator;
-    setStatus({ connection: onLine });
+    // const { onLine } = window.navigator;
+    // setStatus({ connection: onLine });
     const handleConnection = e => {
-      const { onLine } = e.target;
+      const { onLine } = e.target.navigator;
       return setStatus({ connection: onLine });
     };
+
     window.addEventListener('online', handleConnection);
     window.addEventListener('offline', handleConnection);
 
@@ -18,7 +19,7 @@ const ConnectionStatus = () => {
       window.removeEventListener('online', handleConnection);
       window.removeEventListener('offline', handleConnection);
     };
-  }, [connection]);
+  }, []);
 
   return connection ? (
     <div className="status">online</div>
