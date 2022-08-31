@@ -19,7 +19,11 @@ const Clock = ({ offset, location }) => {
       });
     }, 1000);
 
-    return clearInterval();
+    return clearInterval(() => {
+      setTime({
+        currentTime: getTimeWithOffset(offset),
+      });
+    });
   }, []);
 
   return (
