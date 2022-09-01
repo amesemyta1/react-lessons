@@ -13,17 +13,15 @@ const Clock = ({ offset, location }) => {
   const { currentTime } = time;
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       setTime({
         currentTime: getTimeWithOffset(offset),
       });
     }, 1000);
 
-    return clearInterval(() => {
-      setTime({
-        currentTime: getTimeWithOffset(offset),
-      });
-    });
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   return (
