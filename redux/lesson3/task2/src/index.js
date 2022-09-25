@@ -1,6 +1,6 @@
 import store from './store';
 import { addUser, deleteUser, updateUser } from './users.actions';
-import { increment, decrement, reset } from './counter.actions';
+import { increment, decrement, reset } from './counter';
 
 store.subscribe(() => console.log(store.getState()));
 
