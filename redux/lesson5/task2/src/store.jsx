@@ -1,9 +1,12 @@
-/* eslint-disable no-underscore-dangle */
-import { createStore } from 'redux';
-import usersReducer from './users/users.reducer';
+import { createStore, combineReducers } from 'redux';
+import optionsReducer from './options/options.reducer';
+
+const reducer = combineReducers({
+  options: optionsReducer,
+});
 
 const store = createStore(
-  usersReducer,
+  reducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 
