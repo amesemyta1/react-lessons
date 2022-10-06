@@ -1,13 +1,27 @@
-import { createStore, combineReducers } from 'redux';
-import optionsReducer from './options/options.reducer';
+/* eslint-disable no-underscore-dangle */
+import { applyMiddleware, createStore, compose, combineReducers } from 'redux';
+import thunk from 'redux-thunk';
+import usersReducer from './users/users.reducer';
 
-const reducer = combineReducers({
-  options: optionsReducer,
+const mainReducer = combineReducers({
+  users: usersReducer,
 });
 
+const logger = store => next => action => {
+  console.group(action.type);
+  console.info(`dispatching`, action);
+  const result = next(action);
+  console.log(`new state `, store.getState());
+  console.groupEnd(result);
+
+  return result;
+};
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const store = createStore(
-  reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  mainReducer,
+  composeEnhancers(applyMiddleware(thunk), applyMiddleware(logger)),
 );
 
 export default store;
