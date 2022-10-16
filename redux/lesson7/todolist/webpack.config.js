@@ -9,7 +9,6 @@ module.exports = (env, argv) => {
     entry: './src/index.jsx',
     output: {
       filename: 'bundle.js',
-      publicPath: '/',
     },
     module: {
       rules: [
@@ -28,8 +27,8 @@ module.exports = (env, argv) => {
         },
       ],
     },
-    resolve: {
-      extensions: ['.js', '.jsx'],
+    stats: {
+      children: true,
     },
     plugins: [
       new webpack.ProgressPlugin(),
@@ -38,6 +37,9 @@ module.exports = (env, argv) => {
         template: './src/index.html',
       }),
     ],
+    resolve: {
+      extensions: ['.js', '.jsx'],
+    },
     devServer: {
       historyApiFallback: true,
       open: true,

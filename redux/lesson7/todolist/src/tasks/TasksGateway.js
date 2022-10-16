@@ -1,5 +1,5 @@
 /* eslint-disable consistent-return */
-const baseUrl = 'https://62dacf26e56f6d82a76a312f.mockapi.io/api/v1/taskslist';
+const baseUrl = 'https://62da9225e56f6d82a7651b64.mockapi.io/api/v1/tasks';
 
 export const createTask = taskData =>
   fetch(baseUrl, {

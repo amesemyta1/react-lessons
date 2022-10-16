@@ -29,12 +29,9 @@ class TasksList extends Component {
     );
   }
 }
-
 const mapState = state => ({
   tasks: sortedTasksListSelector(state),
 });
-
-console.log('state: ', mapState);
 
 const mapDispatch = {
   getTaskList: taskActions.getTaskList,

@@ -1,8 +1,7 @@
-/* eslint-disable default-param-last */
 import { TASKS_LIST_RECIEVED } from './tasks.actions';
 
 const initialState = {
-  tasks: [],
+  tasksList: [],
 };
 
 const tasksReducer = (state = initialState, action) => {
@@ -10,11 +9,11 @@ const tasksReducer = (state = initialState, action) => {
     case TASKS_LIST_RECIEVED:
       return {
         ...state,
-        tasks: action.payload.tasksList,
+        tasksList: action.payload.tasksList,
       };
+
     default:
       return state;
   }
 };
-
 export default tasksReducer;

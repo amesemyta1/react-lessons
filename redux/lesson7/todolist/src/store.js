@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import tasksReducer from './tasks/tasks.reducer';
