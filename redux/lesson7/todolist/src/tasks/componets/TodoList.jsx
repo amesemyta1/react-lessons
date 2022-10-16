@@ -1,7 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import TasksList from './TasksList';
-import { getTaskList } from '../tasks/tasks.actions';
 
 const TodoList = () => {
   return (
@@ -10,10 +8,6 @@ const TodoList = () => {
       <TasksList />
     </>
   );
-};
-
-const mapDispatch = {
-  getTaskList,
 };
 
 export default TodoList;

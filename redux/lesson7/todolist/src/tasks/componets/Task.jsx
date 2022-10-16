@@ -1,8 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
-const Task = ({ text, done, onChange, onDelete, id }) => {
-  const listItemClasses = classNames('list-item', { 'list-item_done': done });
+const Task = ({ id, text, done, onChange, onDelete }) => {
+  const listItemClasses = classNames('list-item ', { 'list-item_done ': done });
 
   return (
     <li className={listItemClasses}>
@@ -16,6 +17,12 @@ const Task = ({ text, done, onChange, onDelete, id }) => {
       <button className="list-item__delete-btn" onClick={() => onDelete(id)}></button>
     </li>
   );
+};
+
+Task.propTypes = {
+  id: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  done: PropTypes.bool.isRequired,
 };
 
 export default Task;

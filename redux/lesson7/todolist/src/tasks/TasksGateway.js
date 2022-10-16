@@ -1,7 +1,8 @@
+/* eslint-disable consistent-return */
 const baseUrl = 'https://62dacf26e56f6d82a76a312f.mockapi.io/api/v1/taskslist';
 
-export const createTask = taskData => {
-  return fetch(baseUrl, {
+export const createTask = taskData =>
+  fetch(baseUrl, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
@@ -9,22 +10,20 @@ export const createTask = taskData => {
     body: JSON.stringify(taskData),
   }).then(response => {
     if (!response.ok) {
-      throw new Error('Faild to create task');
+      throw new Error('Failed to create task');
     }
   });
-};
 
-export const fetchTasksList = () => {
-  return fetch(baseUrl).then(res => {
-    if (!res.ok) {
-      throw new Error('Faild to fetchTasksList');
+export const fetchTasksList = () =>
+  fetch(baseUrl).then(resp => {
+    if (resp.ok) {
+      console.log(resp.json());
+      return resp.json();
     }
-    return res.json();
   });
-};
 
-export const updateTask = (taskId, taskData) => {
-  return fetch(`${baseUrl}/${taskId}`, {
+export const updateTask = (id, taskData) =>
+  fetch(`${baseUrl}/${id}`, {
     method: 'PUT',
     headers: {
       'Content-type': 'application/json',
@@ -32,17 +31,15 @@ export const updateTask = (taskId, taskData) => {
     body: JSON.stringify(taskData),
   }).then(response => {
     if (!response.ok) {
-      throw new Error('Faild to update task');
+      throw new Error('Failed to update task');
     }
   });
-};
 
-export const deleteTask = taskId => {
-  return fetch(`${baseUrl}/${taskId}`, {
+export const deleteTask = id =>
+  fetch(`${baseUrl}/${id}`, {
     method: 'DELETE',
   }).then(response => {
     if (!response.ok) {
-      throw new Error('Faild to delete task');
+      throw new Error('Failed to delete task');
     }
   });
-};
